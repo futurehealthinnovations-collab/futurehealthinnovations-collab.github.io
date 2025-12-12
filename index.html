@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Call Interview Prep 🚨 - Master Your Medical School Interview</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #4A5568;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #2D3748;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-gray {
+            background: #F8F8F8;
+        }
+        
+        .section-mint {
+            background: #E6F7F3;
+        }
+        
+        .section-teal {
+            background: #3D7C6F;
+            color: #FFFFFF;
+        }
+        
+        .section-teal h2,
+        .section-teal h3 {
+            color: #FFFFFF;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0 80px;
+        }
+        
+        .hero-headline {
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+        
+        .hero-subheadline {
+            font-size: 20px;
+            color: #4A5568;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 500;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #2F776D;
+            color: #FFFFFF;
+            padding: 18px 48px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(47, 119, 109, 0.2);
+        }
+        
+        .cta-button:hover {
+            background: #7DD3C0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(47, 119, 109, 0.3);
+        }
+        
+        .proof-bar {
+            margin-top: 60px;
+            padding: 24px 32px;
+            background: #E6F7F3;
+            border-radius: 16px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .proof-bar p {
+            font-size: 16px;
+            color: #2D3748;
+            font-weight: 600;
+        }
+        
+        /* How It Works - Compact List */
+        .steps-list {
+            max-width: 800px;
+            margin: 48px auto 0;
+            background: #FFFFFF;
+            padding: 40px 48px;
+            border-radius: 20px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .step-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 24px;
+            gap: 20px;
+        }
+        
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #2F776D;
+            color: #FFFFFF;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 4px;
+        }
+        
+        .step-content p {
+            color: #4A5568;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* Value Stack */
+        .perks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+        
+        .perk-card {
+            background: #E6F7F3;
+            padding: 32px;
+            border-radius: 20px;
+            border: 2px solid #7DD3C0;
+        }
+        
+        .perk-card h3 {
+            color: #2F776D;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        
+        .perk-card p {
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        
+        .perk-value {
+            margin-top: 8px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            background: #F2FDF6;
+            border: 1px solid #B9ECC5;
+            color: #2F3E46; /* slightly darker for readability */
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        
+        .bonus-card {
+            background: linear-gradient(135deg, #2F776D 0%, #3D7C6F 100%);
+            color: #FFFFFF;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 24px;
+        }
+        
+        .bonus-card h3 {
+            color: #FFFFFF;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .fine-print {
+            font-size: 13px;
+            color: #E6F7F3;
+            margin-top: 12px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        
+        .pricing-box {
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 48px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(47, 119, 109, 0.15);
+        }
+        
+        .pricing-box h3 {
+            font-size: 28px;
+            margin-bottom: 32px;
+        }
+        
+        .pricing {
+            font-size: 48px;
+            font-weight: 800;
+            color: #2F776D;
+            margin: 24px 0;
+        }
+        
+        .price-old {
+            text-decoration: line-through;
+            color: #4A5568;
+            font-size: 36px;
+            opacity: 0.6;
+        }
+        
+        .price-new {
+            color: #2F776D;
+        }
+        
+        .pricing-note {
+            font-size: 16px;
+            color: #4A5568;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        /* Comparison Table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 48px;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            min-width: 800px;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 20px 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-table th {
+            background: rgba(47, 119, 109, 0.3);
+            font-weight: 700;
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+        
+        .comparison-table td {
+            font-size: 15px;
+            color: #E6F7F3;
+        }
+        
+        .comparison-table tr:first-child th {
+            border-top-left-radius: 12px;
+        }
+        
+        .comparison-table tr:first-child th:last-child {
+            border-top-right-radius: 12px;
+        }
+        
+        .highlight-col {
+            background: rgba(125, 211, 192, 0.15);
+        }
+        
+        .feature-label {
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        
+        .table-note {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: #E6F7F3;
+            font-style: italic;
+        }
+        
+        /* Guarantee */
+        .guarantee-box {
+            background: #E6F7F3;
+            padding: 48px;
+            border-radius: 20px;
+            border: 2px solid #7DD3C0;
+            margin-top: 48px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .guarantee-box h3 {
+            color: #2F776D;
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 28px;
+        }
+        
+        .guarantee-box p {
+            line-height: 1.8;
+            font-size: 17px;
+            color: #2D3748;
+            margin-bottom: 16px;
+        }
+        
+        .guarantee-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .final-cta h2 {
+            margin-bottom: 24px;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            color: #4A5568;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: #F8F8F8;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            color: #4A5568;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        footer a {
+            color: #2F776D;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            h2 {
+                font-size: 28px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .hero {
+                padding: 80px 0 60px;
+            }
+            
+            .hero-subheadline {
+                font-size: 18px;
+            }
+            
+            .cta-button {
+                padding: 16px 36px;
+                font-size: 16px;
+            }
+            
+            .steps-list {
+                padding: 32px 24px;
+            }
+            
+            .perks-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing {
+                font-size: 36px;
+            }
+            
+            .price-old {
+                font-size: 28px;
+            }
+            
+            .table-note {
+                display: block;
+            }
+            
+            .proof-bar {
+                padding: 20px 24px;
+            }
+            
+            .guarantee-box {
+                padding: 32px 24px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            .container {
+                padding: 0 16px;
+            }
+            
+            .perk-card,
+            .bonus-card,
+            .pricing-box {
+                padding: 24px;
+            }
+            
+            .steps-list {
+                padding: 24px 20px;
+            }
+            
+            .step-item {
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-headline">On-Call Interview Prep 🚨 <br>- Master Your Medical School Interview</h1>
+            <p class="hero-subheadline">Walk into your med school interview knowing exactly what interviewers look for to pick successful candidates over rejected ones</p>
+            <a href="#signup" class="cta-button">Start Your Free Trial →</a>
+            
+            <div class="proof-bar">
+                <p>Created by a resident doctor (me 😆) with combined 500+ hours of knowledge from preparing for my own med school and residency interviews, plus interviewing 50+ med school applicants.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works -->
+    <section class="section section-gray">
+        <div class="container">
+            <h2 style="text-align: center;">How It Works</h2>
+            <p style="text-align: center; font-size: 18px; max-width: 700px; margin: 0 auto 20px;">Master interview skills efficiently with actionable, rubric-based feedback from physicians who's been on both sides of the table.</p>
+            
+            <div class="steps-list">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <p>Sign up and receive a link to upload your video recordings</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <p>Choose your own question or select from our complimentary MMI question bank</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <p>Video or audio record your response to one question (keep each video to 1 question only, max 6 minutes)</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <p>Upload the video to your private portal</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <p>Receive detailed, rubric-based feedback within 24 hours</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <p>Review feedback, implement changes, and practice again. Walk into your interview with confidence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Value Stack -->
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center;">What You Get</h2>
+            <p style="text-align: center; font-size: 18px; color: #4A5568; max-width: 800px; margin: 0 auto 20px;">Everything you need to master the MMI format and walk in prepared</p>
+            
+            <div class="perks-grid">
+                <div class="perk-card">
+                    <h3>Unlimited Physician-Reviewed Video Feedback</h3>
+                    <p>Expert physician interviewers give you clear, actionable feedback—explaining what each question is really assessing and exactly how to score higher. Delivered within 24 hours.</p>
+                    <p class="perk-value">
+                        <strong>Market Value:</strong> $200+ per 1-hour session<br>
+                    </p>
+                </div>
+                
+                <div class="perk-card">
+                    <h3>Practice Anytime on Your Schedule</h3>
+                    <p>No scheduling hassles or Zoom fatigue. Just pure practice time focused on improvement.</p>
+                    <p class="perk-value"><strong>Time Saved:</strong> 1+ hour/week from scheduling & setup<br></p>
+                </div>
+                
+                <div class="perk-card">
+                    <h3>Rubric-Based Progress Tracking</h3>
+                    <p>See exactly where you stand and what to improve next with objective, rubric-based scoring.</p>
+                    <p class="perk-value">
+                        <strong>Market Value:</strong> $100+ equivalent coaching insight<br>
+                    </p>
+                </div>
+                
+                <div class="perk-card">
+                    <h3>One-Page Reflection Template</h3>
+                    <p>Structured framework to extract your strongest stories and present them clearly — no more rewriting the same answers endlessly.</p>
+                    <p class="perk-value">
+                        <strong>Time Saved:</strong> 10+ hours of rewriting and guesswork<br>
+                    </p>
+                </div>
+                
+                <div class="perk-card">
+                    <h3>MMI Question Bank</h3>
+                    <p>100+ real MMI scenarios organized by type so you can start practicing right away.</p>
+                    <p class="perk-value"><strong>Time Saved:</strong> 3+ hours saved from searching online<br></p>
+                </div>
+                
+                <div class="perk-card">
+                    <h3>Ace Your Interview and Launch Your Doctor Journey</h3>
+                    <p>Walk in confident and preapred because you know what your interviewers want to see.</p>
+                    <p class="perk-value"><strong>Value:</strong>PRICELESS</p>
+                </div>
+
+            </div>
+            
+            <div class="bonus-card">
+                    <h3>🎁 BONUS: FREE 1-Hour Mock Interview + Live Feedback</h3>
+                    <p style="font-size: 18px; line-height: 1.7;">Get a 1h live mock interview with immediate verbal feedback to assess your readiness. Walk into your real interview knowing exactly where you stand.</p>
+                    <p><strong>Market Value:</strong>$300+ per mock interview</p>
+                    <p class="fine-print">*Bonus mock interview supply limited. Only eligible for those who have subscribed for >3 weeks and demonstrated implementation of feedback and improvement in score.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section section-mint" style="text-align: center; padding: 40px 0;"> 
+
+        <h2 style="text-align: center; font-weight: 700; margin-bottom: 24px;">Pricing</h2>
+
+        <!-- Value Stack -->
+        <div style="max-width: 480px; margin: 0 auto 32px; text-align: left; background: #F7FAFC; padding: 24px; border-radius: 16px; border: 1px solid #E2E8F0;">
+            <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 16px;">Your Weekly Value</h3>
+
+            <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.6; font-size: 18px;">
+                <li><strong>$200+</strong> Unlimited Physician-Reviewed Feedback</li>
+                <li><strong>$100+</strong> Rubric-Based Scoring & Analysis</li>
+                <li><strong>10+ Hours</strong> Saved With Reflection Framework</li>
+                <li><strong>3+ Hours</strong> Saved From MMI Question Bank</li>
+                <li><strong>1+ Hour/Week</strong> Saved From Scheduling Hassles</li>
+            </ul>
+
+            <hr style="margin: 18px 0; border: none; border-top: 1px solid #CBD5E0;">
+
+            <p style="font-size: 22px; margin: 0;"><strong>Total Weekly Value:</strong> <span style="color: #2F855A; font-weight: 800;">$350+ and 14hr+ saved</span></p>
+        </div>
+
+        <!-- Price Comparison -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+        <div style="margin-bottom: 24px;">
+            <span style="font-size: 40px; font-weight: 800; color: #2F6F62; margin: 0;">all for</span>
+            <span style="font-size: 40px; font-weight: 500; color: #A0AEC0; text-decoration: line-through; margin: 0;">$50/week</span>
+            <span style="font-size: 40px; font-weight: 900; font-family: 'Permanent Marker'; color: #e53e3e; margin: 0;">$25/week</span>
+        </div>
+
+        <!-- Scarcity & Deadline -->
+        <p style="color: #4A5568; font-size: 30px;margin-bottom: 24px;">
+            <strong>Only 5 seats left</strong> • Signup closes <strong>Dec 15, 2025</strong>
+        </p>
+
+        <!-- CTA -->
+        <a href="https://forms.gle/GUC23qkCV47J8myf6"
+           style="display: inline-block;
+                  background: #2F6F62;
+                  color: white;
+                  padding: 16px 32px;
+                  border-radius: 12px;
+                  font-size: 18px;
+                  font-weight: 700;
+                  text-decoration: none;
+                  transition: background 0.2s;">
+            Claim Your Spot Now →
+        </a>
+
+    </section>
+    
+    <!-- Comparison Table -->
+    <section class="section section-teal">
+        <div class="container">
+            <h2 style="text-align: center;">How We Compare</h2>
+            <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto 20px; color: #E6F7F3;">See why On-Call Interview Prep is the smartest way to prepare</p>
+            
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 200px;"></th>
+                            <th class="highlight-col">On-Call Interview Prep</th>
+                            <th>Pre-meds/Friends and Family</th>
+                            <th>Professional Coaching Services</th>
+                            <th>University Career Services</th>
+                            <th>Current Medical Students</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-label">🎯 Insider knowledge - what do interviewers look for?</td>
+                            <td class="highlight-col">✅ Physicians who have interviewed candidates for med school</td>
+                            <td>❌ Zero interview experience</td>
+                            <td>✅ Varies by service</td>
+                            <td>⚠️ Variable, not med school specific</td>
+                            <td>⚠️ Variable - some have never interviewed</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">🎯 Actionable feedback</td>
+                            <td class="highlight-col">✅ Rubric-based scoring + actionable feedback to improve your score in each category</td>
+                            <td>❌ Can't provide useful feedback without knowing what interviewers look for</td>
+                            <td>✅ Varies by service</td>
+                            <td>⚠️ Variable, may not be med school specific</td>
+                            <td>⚠️ Variable level of feedback</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">🎯 Flexibility</td>
+                            <td class="highlight-col">✅ Practice anytime - spend time only on improving your skills, not on scheduling hassles</td>
+                            <td>❌ Hassle to set up practice time</td>
+                            <td>❌ Limited time slots, need to book in advance</td>
+                            <td>❌ Need to book a time</td>
+                            <td>❌ Hassle to set up practice time</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">🎯 Volume of practice</td>
+                            <td class="highlight-col">✅ You control how prepared you want to be (not limited by $)</td>
+                            <td>⚠️ May not set up enough sessions to get enough reps</td>
+                            <td>⚠️ Cannot get enough reps unless you have a deep wallet</td>
+                            <td>⚠️ Free, but only a few sessions</td>
+                            <td>⚠️ May not set up enough sessions to get enough reps</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">🎯 Progress tracking</td>
+                            <td class="highlight-col">✅ Track progress with quantitative rubric-based scoring</td>
+                            <td>❌ No objective metrics to track progress</td>
+                            <td>⚠️ Some services provide this with additional costs</td>
+                            <td>❌ Does not track progress</td>
+                            <td>❌ No objective metrics to track progress</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Commitment</td>
+                            <td class="highlight-col">✅ Weekly, cancel anytime. FREE trial for first video</td>
+                            <td>✅ None</td>
+                            <td>❌ 2-6 months</td>
+                            <td>✅ None</td>
+                            <td>✅ None</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Cost</td>
+                            <td class="highlight-col">$50/week → <strong>$25/week discount</strong></td>
+                            <td>Free</td>
+                            <td>$1,000+ for a package</td>
+                            <td>Free</td>
+                            <td>$50+ per 1h session (~2 questions)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="table-note">← Swipe left/right on mobile to see full comparison →</p>
+        </div>
+    </section>
+    
+    <!-- Guarantee -->
+    <section class="section">
+        <div class="container">
+            <div class="guarantee-box">
+                <h3>Risk-Free Guarantee</h3>
+                <p>Try your first video FREE—no credit card needed. See the feedback quality before committing.</p>
+                <p>If by video 3 you haven't improved by at least 1 point on the rubric → <strong>100% refund + free 15-min coaching call</strong> to troubleshoot together.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="final-cta section-mint" id="signup">
+        <div class="container">
+            <h2>Ready to Master Your Medical School Interview?</h2>
+            <p>Join the students who are walking into their interviews prepared and confident. Start your free trial today—no credit card required.</p>
+            <a href="https://forms.gle/GUC23qkCV47J8myf6" class="cta-button">Start Your Free Trial →</a>
+            <p style="margin-top: 24px; font-size: 14px; color: #4A5568;">First video FREE • No commitment • Cancel anytime</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Questions? Contact us at <a href="mailto:future.health.innovations@gmail.com">future.health.innovations@gmail.com</a></p>
+            <p style="margin-top: 16px; font-size: 13px; color: #4A5568;">© 2025 On-Call Interview Prep. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

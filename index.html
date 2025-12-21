@@ -73,26 +73,60 @@
         .section-teal h3 {
             color: #FFFFFF;
         }
-        
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 100px 0 80px;
+
+        /* Header */
+        .header {
+            padding: 24px 0;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 18px;
+            color: #2F776D;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         
+        .hero {
+            text-align: center;
+            padding: 80px 0 90px;
+            background: linear-gradient(180deg, #F6FAF9 0%, #FFFFFF 70%);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(47, 119, 109, 0.12);
+            color: #2F776D;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            margin-bottom: 20px;
+        }
+
         .hero-headline {
             max-width: 900px;
             margin: 0 auto 20px;
         }
-        
+
+        .hero-headline span.light {
+            font-weight: 600;
+            color: #4A5568;
+        }
+
         .hero-subheadline {
             font-size: 20px;
             color: #4A5568;
-            max-width: 800px;
-            margin: 0 auto 40px;
+            max-width: 820px;
+            margin: 0 auto 36px;
             font-weight: 500;
         }
-        
+
+        .cta-wrap {
+            margin-bottom: 32px;
+        }
+
         .cta-button {
             display: inline-block;
             background: #2F776D;
@@ -103,29 +137,196 @@
             font-weight: 700;
             font-size: 18px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(47, 119, 109, 0.2);
+            box-shadow: 0 4px 12px rgba(47, 119, 109, 0.25);
         }
-        
+
         .cta-button:hover {
             background: #7DD3C0;
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(47, 119, 109, 0.3);
+            box-shadow: 0 6px 16px rgba(47, 119, 109, 0.35);
         }
-        
+
+        .cta-meta {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #718096;
+        }
+
+        /* Proof Bar */
         .proof-bar {
-            margin-top: 60px;
-            padding: 24px 32px;
+            padding: 20px 28px;
             background: #E6F7F3;
             border-radius: 16px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .proof-bar p {
+            font-size: 15px;
+            color: #2D3748;
+            font-weight: 600;
+        }
+
+
+        
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 80px 24px;
+            background: linear-gradient(135deg, #7DD3C0 0%, #2F776D 100%);
+            position: relative;
+            overflow: hidden;
         }
         
-        .proof-bar p {
+        .testimonial-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .testimonial-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .section-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            gap: 32px;
+            margin-bottom: 56px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 32px 24px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #2F776D;
+            line-height: 1;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .stat-label {
             font-size: 16px;
             color: #2D3748;
             font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        /* Testimonial Card */
+        .testimonial-card {
+            background: #FFFFFF;
+            padding: 48px;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            gap: 32px;
+            align-items: start;
+        }
+        
+        .testimonial-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 4px solid #7DD3C0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-content {
+            flex: 1;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .stars {
+            color: #F59E0B;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .rating-text {
+            font-weight: 700;
+            color: #2D3748;
+            font-size: 16px;
+        }
+        
+        .testimonial-quote {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #2D3748;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: #2F776D;
+            font-size: 17px;
+        }
+        
+        .author-role {
+            color: #4A5568;
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 4px;
         }
         
         /* How It Works - Compact List */
@@ -206,7 +407,7 @@
             border-radius: 12px;
             background: #F2FDF6;
             border: 1px solid #B9ECC5;
-            color: #2F3E46; /* slightly darker for readability */
+            color: #2F3E46;
             font-weight: 600;
             font-size: 16px;
             line-height: 1.4;
@@ -256,17 +457,6 @@
             margin: 24px 0;
         }
         
-        .price-old {
-            text-decoration: line-through;
-            color: #4A5568;
-            font-size: 36px;
-            opacity: 0.6;
-        }
-        
-        .price-new {
-            color: #2F776D;
-        }
-        
         .pricing-note {
             font-size: 16px;
             color: #4A5568;
@@ -274,63 +464,109 @@
             font-weight: 600;
         }
         
-        /* Comparison Table */
-        .table-wrapper {
-            overflow-x: auto;
-            margin-top: 48px;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            min-width: 800px;
-        }
-        
-        .comparison-table th,
-        .comparison-table td {
-            padding: 20px 16px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .comparison-table th {
-            background: rgba(47, 119, 109, 0.3);
+        /* Comparison Section */
+        .comparison-header h2 {
+            font-size: 36px;
             font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .comparison-header p {
+            font-size: 18px;
+            color: #6B7280;
+            margin-bottom: 48px;
+        }
+
+        .comparison-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .comparison-card {
+            display: flex;
+            background: #FFFFFF;
+            padding: 24px 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            gap: 24px;
+        }
+
+        .card-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 140px;
+        }
+
+        .card-left .card-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .card-left h3 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .card-middle {
+            flex: 3;
             font-size: 16px;
-            color: #FFFFFF;
+            color: #4A5568;
         }
-        
-        .comparison-table td {
-            font-size: 15px;
-            color: #E6F7F3;
+
+        .card-middle ul {
+            margin-top: 8px;
+            padding-left: 20px;
+            list-style: disc;
         }
-        
-        .comparison-table tr:first-child th {
-            border-top-left-radius: 12px;
+
+        .card-right {
+            flex: 1;
+            background: #E6F7F3;
+            border-radius: 8px;
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 160px;
         }
-        
-        .comparison-table tr:first-child th:last-child {
-            border-top-right-radius: 12px;
+
+        .card-right strong {
+            font-weight: 600;
+            margin-bottom: 4px;
         }
-        
-        .highlight-col {
-            background: rgba(125, 211, 192, 0.15);
-        }
-        
-        .feature-label {
-            font-weight: 700;
-            color: #FFFFFF;
-        }
-        
-        .table-note {
-            text-align: center;
-            margin-top: 24px;
+
+        .card-right p {
             font-size: 14px;
-            color: #E6F7F3;
-            font-style: italic;
+            color: #2D3748;
         }
+
+        .comparison-synthesis {
+            margin-top: 64px;
+        }
+
+        .comparison-synthesis hr {
+            border: none;
+            height: 1px;
+            background: #CBD5E1;
+            margin-bottom: 24px;
+        }
+
+        .comparison-synthesis h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .comparison-synthesis p {
+            font-size: 16px;
+            color: #4A5568;
+            margin-bottom: 6px;
+        }
+
+
         
         /* Guarantee */
         .guarantee-box {
@@ -404,6 +640,7 @@
             text-decoration: underline;
         }
         
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             h1 {
@@ -419,13 +656,13 @@
             }
             
             .hero {
-                padding: 80px 0 60px;
+                padding: 70px 0 70px;
             }
-            
+
             .hero-subheadline {
                 font-size: 18px;
             }
-            
+
             .cta-button {
                 padding: 16px 36px;
                 font-size: 16px;
@@ -443,10 +680,6 @@
                 font-size: 36px;
             }
             
-            .price-old {
-                font-size: 28px;
-            }
-            
             .table-note {
                 display: block;
             }
@@ -457,6 +690,42 @@
             
             .guarantee-box {
                 padding: 32px 24px;
+            }
+            
+            /* Testimonial Mobile Styles */
+            .testimonial-section {
+                padding: 60px 20px;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .stats-bar {
+                gap: 20px;
+            }
+            
+            .stat-item {
+                min-width: 100%;
+                padding: 24px 20px;
+            }
+            
+            .stat-number {
+                font-size: 40px;
+            }
+            
+            .testimonial-card {
+                flex-direction: column;
+                padding: 32px 24px;
+                text-align: center;
+            }
+            
+            .testimonial-image {
+                margin: 0 auto;
+            }
+            
+            .rating {
+                justify-content: center;
             }
         }
         
@@ -472,6 +741,10 @@
             .container {
                 padding: 0 16px;
             }
+
+            .hero-badge {
+                font-size: 13px;
+            }
             
             .perk-card,
             .bonus-card,
@@ -486,19 +759,99 @@
             .step-item {
                 gap: 16px;
             }
+            
+            .section-header h2 {
+                font-size: 28px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+            
+            .stat-label {
+                font-size: 14px;
+            }
+            
+            .testimonial-quote {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">On-Call Interview Prep 🚨</div>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-headline">On-Call Interview Prep 🚨 <br> — Know Exactly What Interviewers Are Looking For</h1>
-            <p class="hero-subheadline">Practice interviews on your own schedule with  expert feedback — so you can walk into your interview knowing exactly what sets top candidates apart.</p>
-            <a href="#signup" class="cta-button">Start Your Free Trial →</a>
-            
+            <h1 class="hero-headline">
+                Stop guessing what interviewers want and start answering in a way that actually scores -
+                <span class="light"> <i>within one video</i></span>
+            </h1>
+
+            <p class="hero-subheadline">
+                Practice MMI answers on your own schedule and get rubric-based, actionable feedback —
+                so you know exactly what interviewers assess and how to make your answers score higher.
+            </p>
+
+            <div class="cta-wrap">
+                <a href="#signup" class="cta-button">Reserve Your Free Trial Spot →</a>
+                <div class="cta-meta">No payment required · Trial starts Dec 26th, 2025 · 10 spots only</div>
+            </div>
+
             <div class="proof-bar">
-                <p>Created by a resident doctor (me 😆) with combined 500+ hours of knowledge from preparing for my own med school and residency interviews, plus interviewing 50+ med school applicants.</p>
+                <p>
+                    Tailored feedback from a physician · 500+ hours of interview experience ·
+                    50+ medical school applicants interviewed
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>See What Users Are Saying</h2>
+            </div>
+            
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">4/5</span>
+                    <div class="stat-label">users found the feedback helpful</div>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">&lt;24h</span>
+                    <div class="stat-label">turnaround time for feedback</div>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">0h</span>
+                    <div class="stat-label">wasted on scheduling practice with others</div>
+                </div>
+            </div>
+            
+            <!-- Testimonial Card -->
+            <div class="testimonial-card">
+                <img src="headshot1.jpg" alt="Brendan" class="testimonial-image">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5/5</span>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        "The feedback is clear, structured, and directly tied to what MMI stations evaluate. It helped me understand how to strengthen my responses beyond sounding polished. One of the most useful prep tools I've used."
+                    </blockquote>
+                    <cite class="testimonial-author">— Brendan</cite>
+                    <div class="author-role">Beta User</div>
+                </div>
             </div>
         </div>
     </section>
@@ -600,8 +953,8 @@
                 
                 <div class="perk-card">
                     <h3>Ace Your Interview and Launch Your Doctor Journey</h3>
-                    <p>Walk in confident and preapred because you know what your interviewers look for.</p>
-                    <p class="perk-value"><strong>Value:</strong>PRICELESS</p>
+                    <p>Walk in confident and prepared because you know what your interviewers look for</p>
+                    <p class="perk-value"><strong>Value:</strong> PRICELESS</p>
                 </div>
 
             </div>
@@ -630,22 +983,20 @@
             <p style="font-size: 22px; margin: 0;"><strong>Equivalent Market Value That You Get:</strong> $300+ and 14hr+ per week </p>
         </div>
 
-        <!-- Price Comparison -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+        <!-- Price Display -->
         <div style="margin-bottom: 24px;">
-            <span style="font-size: 40px; font-weight: 800; color: #2F6F62; margin: 0;">all for</span>
-            <span style="font-size: 40px; font-weight: 900; color: #e53e3e; margin: 0;">$50/week</span>
+            <span style="font-size: 40px; font-weight: 800; color: #2F776D; margin: 0;">$50/week</span>
         </div>
 
         <!-- Scarcity & Deadline -->
-        <p style="color: #4A5568; font-size: 24px;margin-bottom: 24px;">
-            All spots are taken. Next batch opens <strong> Dec 26th, 2025 </strong>. <br>Reserve your spot today.
+        <p style="color: #4A5568; font-size: 24px; margin-bottom: 24px;">
+            Free trial opens <strong>Dec 26th, 2025</strong>. <br>Reserve your spot today.
         </p>
 
         <!-- CTA -->
         <a href="https://forms.gle/GUC23qkCV47J8myf6"
            style="display: inline-block;
-                  background: #2F6F62;
+                  background: #2F776D;
                   color: white;
                   padding: 16px 32px;
                   border-radius: 12px;
@@ -653,100 +1004,120 @@
                   font-weight: 700;
                   text-decoration: none;
                   transition: background 0.2s;">
-            Join the Waitlist →
+            Reserve your spot →
         </a>
 
     </section>
     
-    <!-- Comparison Table -->
-    <section class="section section-teal">
-        <div class="container">
-            <h2 style="text-align: center;">How We Compare</h2>
-            <p style="text-align: center; font-size: 18px; max-width: 800px; margin: 0 auto 20px; color: #E6F7F3;">See why On-Call Interview Prep is the smartest way to prepare</p>
-            
-            <div class="table-wrapper">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 200px;"></th>
-                            <th class="highlight-col">On-Call Interview Prep</th>
-                            <th>Pre-meds/Friends and Family</th>
-                            <th>Professional Coaching Services</th>
-                            <th>University Career Services</th>
-                            <th>Current Medical Students</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="feature-label">🎯 Insider knowledge - what do interviewers look for?</td>
-                            <td class="highlight-col">✅ Physicians who have interviewed candidates for med school</td>
-                            <td>❌ Zero interview experience</td>
-                            <td>✅ Varies by service</td>
-                            <td>⚠️ Variable, not med school specific</td>
-                            <td>⚠️ Variable - some have never interviewed</td>
-                        </tr>
-                        <tr>
-                            <td class="feature-label">🎯 Actionable feedback</td>
-                            <td class="highlight-col">✅ Rubric-based scoring + actionable feedback to improve your score in each category</td>
-                            <td>❌ Can't provide useful feedback without knowing what interviewers look for</td>
-                            <td>✅ Varies by service</td>
-                            <td>⚠️ Variable, may not be med school specific</td>
-                            <td>⚠️ Variable level of feedback</td>
-                        </tr>
-                        <tr>
-                            <td class="feature-label">🎯 Flexibility</td>
-                            <td class="highlight-col">✅ Practice anytime - spend time only on improving your skills, not on scheduling hassles</td>
-                            <td>❌ Hassle to set up practice time</td>
-                            <td>❌ Limited time slots, need to book in advance</td>
-                            <td>❌ Need to book a time</td>
-                            <td>❌ Hassle to set up practice time</td>
-                        </tr>
-                        <tr>
-                            <td class="feature-label">🎯 Volume of practice</td>
-                            <td class="highlight-col">✅ You control how prepared you want to be (not limited by $)</td>
-                            <td>⚠️ May not set up enough sessions to get enough reps</td>
-                            <td>⚠️ Cannot get enough reps unless you have a deep wallet</td>
-                            <td>⚠️ Free, but only a few sessions</td>
-                            <td>⚠️ May not set up enough sessions to get enough reps</td>
-                        </tr>
-                        <tr>
-                            <td class="feature-label">🎯 Progress tracking</td>
-                            <td class="highlight-col">✅ Track progress with quantitative rubric-based scoring</td>
-                            <td>❌ No objective metrics to track progress</td>
-                            <td>⚠️ Some services provide this with additional costs</td>
-                            <td>❌ Does not track progress</td>
-                            <td>❌ No objective metrics to track progress</td>
-                        </tr>
-                        <tr>
-                            <td class="feature-label">Commitment</td>
-                            <td class="highlight-col">✅ Weekly, cancel anytime. FREE trial for first video</td>
-                            <td>✅ None</td>
-                            <td>❌ 2-6 months</td>
-                            <td>✅ None</td>
-                            <td>✅ None</td>
-                        </tr>
-                        <tr>
-                            <td class="feature-label">Cost</td>
-                            <td class="highlight-col">$50/week → <strong>$25/week discount</strong></td>
-                            <td>Free</td>
-                            <td>$1,000+ for a package</td>
-                            <td>Free</td>
-                            <td>$50+ per 1h session (~2 questions)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <p class="table-note">← Swipe left/right on mobile to see full comparison →</p>
+    <section class="section section-gray">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="comparison-header text-center">
+          <h2>Why most interview preparation methods don't move the needle</h2>
+          <p>Most applicants work hard, but only those who work hard in the right direction succeed.</p>
         </div>
-    </section>
+
+        <!-- Why Not X Cards -->
+        <div class="comparison-card">
+            <div class="card-left">
+              <span class="card-icon">👥</span>
+              <h3>Friends & Family</h3>
+            </div>
+            <div class="card-middle">
+              <p><strong>Why people try it:</strong> Easy, informal practice</p>
+              <ul>
+                <li>Feedback is vague or overly positive</li>
+                <li>Hard to schedule regular practice</li>
+              </ul>
+            </div>
+            <div class="card-right">
+              <strong>What’s missing:</strong>
+              <p>Actionable feedback tied to real interview expectations</p>
+            </div>
+          </div>
+
+          <div class="comparison-card">
+            <div class="card-left">
+              <span class="card-icon">🎓</span>
+              <h3>Other Premeds</h3>
+            </div>
+            <div class="card-middle">
+              <p><strong>Why people try it:</strong> Free, peer support</p>
+              <ul>
+                <li>Lacks insight into interviewer scoring</li>
+                <li>Bad feedback may reinforce bad habits</li>
+              </ul>
+            </div>
+            <div class="card-right">
+              <strong>What’s missing:</strong>
+              <p>Actionable feedback that actually boosts your interview scores</p>
+            </div>
+          </div>
+
+          <div class="comparison-card">
+            <div class="card-left">
+              <span class="card-icon">💻</span>
+              <h3>Live Mock Interviews</h3>
+            </div>
+            <div class="card-middle">
+              <p><strong>Why people try it:</strong> Simulates the real interview</p>
+              <ul>
+                <li>Comprehensive feedback can be difficult to digest and implement</li>
+                <li>Not practical for frequent daily practice</li>
+              </ul>
+            </div>
+            <div class="card-right">
+              <strong>What’s missing:</strong>
+              <p>Focused, repeated practice on key skills for mastery</p>
+            </div>
+          </div>
+
+          <div class="comparison-card">
+            <div class="card-left">
+              <span class="card-icon">💰</span>
+              <h3>Expensive Prep Packages</h3>
+            </div>
+            <div class="card-middle">
+              <p><strong>Why people try it:</strong> Promises complete guidance</p>
+              <ul>
+                <li>Price doesn’t guarantee admission</li>
+                <li>Big financial commitment</li>
+                <li>Scheduling with coach can be tricky</li>
+              </ul>
+            </div>
+            <div class="card-right">
+              <strong>What’s missing:</strong>
+              <p>Quality reassurance and flexibility in time/money</p>
+            </div>
+          </div>
+
+          <!-- Success / Highlighted Card -->
+          <div class="comparison-synthesis text-center"> 
+                <hr> <h3>What Effective Candidates Do Differently</h3>
+              <div class="comparison-card comparison-card-success" style="background: #E6F7F3;">
+                <div class="card-left">
+                  <h3>On-Call Interview Prep 🚨</h3>
+                </div>
+                <div class="card-middle">
+                  <p><strong>Improve deliberately, not randomly</strong></p>
+                  <p><strong>Know exactly what interviewers are looking for - no guesswork</strong></p>
+                  <p><strong>Rubric-based feedback boosts your scores</strong></p>
+                  <p><strong>Practice as much as you need, unrestricted by time or cost</strong></p>
+                </div>
+                <div class="card-right">
+                  <a href="#signup" class="cta-button">Sign Up Now</a>
+                </div>
+              </div>
+          </div>
+        </div>
+
     
     <!-- Guarantee -->
     <section class="section">
         <div class="container">
             <div class="guarantee-box">
                 <h3>100% Satisfaction and Money-back Guarantee</h3>
-                <p>If you’re not happy with the quality of feedback, we’ll give you a <b>100% refund — plus a free 15-minute coaching call </b> to troubleshoot your interview prep together. </p>
+                <p>If you're not happy with the quality of feedback, we'll give you a <b>100% refund — plus a free 15-minute coaching call </b> to troubleshoot your interview prep together. </p>
                 <p>Just email us with a refund request before submitting your 4th video. </p>
             </div>
         </div>
@@ -755,10 +1126,13 @@
     <!-- Final CTA -->
     <section class="final-cta section-mint" id="signup">
         <div class="container">
-            <h2>Ready to Master Your Medical School Interview?</h2>
-            <p>Join the students who are walking into their interviews prepared and confident. Sign up to join the waitlist today to try your <b> first video for free </b> (no card needed) and experience the quality of feedback before you decide.</p></p>
-            <a href="https://forms.gle/GUC23qkCV47J8myf6" class="cta-button">Join the Waitlist →</a>
-            <p style="margin-top: 24px; font-size: 14px; color: #4A5568;">Registration Opens Dec 26th, 2025 | Spots Limited</p>
+            <h2>Ready to Improve Your Interview Scores?</h2>
+            <p>Practice with purpose with rubric-based video feedback so you
+            know exactly what interviewers are assessing and how to improve.
+            Join the waitlist to try your <b>first video for free</b> (no payment info required) and experience
+            the quality feedback before you commit.</p>
+            <a href="https://forms.gle/GUC23qkCV47J8myf6" class="cta-button">Reserve your spot →</a>
+            <p style="margin-top: 24px; font-size: 14px; color: #4A5568;">Next free trial starts Dec 26, 2025 · Limited to 10 spots</p>
         </div>
     </section>
     
